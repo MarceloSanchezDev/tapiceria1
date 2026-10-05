@@ -1,0 +1,1 @@
+export function ServiceCard({ title, text, image }) { return <article className="overflow-hidden rounded-xl bg-white shadow-sm">{image && <img src={image} alt="Proyecto realizado" className="h-48 w-full object-cover"/>}<div className="p-5"><h3 className="font-bold">{title}</h3><p className="mt-2 text-sm text-slate-600">{text}</p></div></article>; }

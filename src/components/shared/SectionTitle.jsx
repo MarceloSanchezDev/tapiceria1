@@ -1,0 +1,1 @@
+export function SectionTitle({ eyebrow, title, text }) { return <header className="mb-8"><p className="text-sm font-bold uppercase tracking-widest text-amber-700">{eyebrow}</p><h2 className="mt-2 text-3xl font-bold">{title}</h2>{text && <p className="mt-3 text-slate-600">{text}</p>}</header>; }
