@@ -6,7 +6,7 @@ export function WorkGallery() {
   return (
     <section className="work-gallery" id="trabajos" aria-labelledby="trabajos-title">
       <div className="work-gallery__heading">
-        <div><p className="client-eyebrow client-eyebrow--dark">Trabajos realizados</p><h2 id="trabajos-title">Cada espacio tiene su propia solución</h2></div>
+        <div><h2 id="trabajos-title">Cada espacio tiene su propia solución</h2></div>
         <p>Esta sección queda lista para mostrar los proyectos reales del taller.</p>
       </div>
       <div className="work-gallery__grid">

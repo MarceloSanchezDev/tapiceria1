@@ -33,7 +33,6 @@ export default function ClientLandingPage() {
         <div className="client-hero__image" />
         <div className="client-hero__shade" />
         <div className="client-hero__content">
-          <p className="client-eyebrow">Taller propio · Atención personalizada</p>
           <h1>Cortinas y tapicería <em>a medida</em> para tu hogar.</h1>
           <p className="client-lead">Asesoramiento, medición e instalación con la calidad de un taller familiar.</p>
           <div className="client-hero__buttons">
@@ -47,7 +46,6 @@ export default function ClientLandingPage() {
       </section>
 
       <section className="client-services" aria-labelledby="servicios-title">
-        <p className="client-eyebrow client-eyebrow--dark">Lo que hacemos</p>
         <h2 id="servicios-title">Soluciones hechas para tu espacio</h2>
         <div className="client-service-grid">
           <article><span>01</span><h3>Cortinas a medida</h3><p>Telas, barrales y rieles elegidos para cada ambiente.</p></article>
@@ -60,7 +58,6 @@ export default function ClientLandingPage() {
 
       <section className="client-calculator" id="cotizador" aria-labelledby="cotizador-title">
         <div className="client-calculator__intro">
-          <p className="client-eyebrow client-eyebrow--dark">Presupuesto rápido</p>
           <h2 id="cotizador-title">Contanos qué necesitás</h2>
           <p>Elegí estas opciones y te llevamos la consulta lista a WhatsApp.</p>
         </div>
