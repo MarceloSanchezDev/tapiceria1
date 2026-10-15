@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { defaultWhatsappMessage, whatsappLink } from '../../data/businessData';
 import { WorkGallery } from '../../components/WorkGallery/WorkGallery';
+import { ScrollCurtain } from '../../components/ScrollCurtain/ScrollCurtain';
 import './ClientLandingPage.css';
 
 const services = ['Cortinas a medida', 'Cortinas roller', 'Blackout', 'Retapizado'];
@@ -84,6 +85,7 @@ export default function ClientLandingPage() {
         <div><strong>Carlos Reyes Decoraciones</strong><span>Cortinas, roller y tapicería a medida.</span></div>
         <a href={whatsappLink()} target="_blank" rel="noreferrer">Escribinos por WhatsApp</a>
       </footer>
+      <ScrollCurtain />
     </main>
   );
 }
