@@ -3,6 +3,7 @@ import { defaultWhatsappMessage, whatsappLink } from '../../data/businessData';
 import { WorkGallery } from '../../components/WorkGallery/WorkGallery';
 import { ScrollCurtain } from '../../components/ScrollCurtain/ScrollCurtain';
 import './ClientLandingPage.css';
+import './ServiceCardAnimations.css';
 
 const services = ['Cortinas a medida', 'Cortinas roller', 'Blackout', 'Retapizado'];
 const spaces = ['Living', 'Dormitorio', 'Oficina / local', 'Casa completa'];
@@ -11,6 +12,30 @@ export default function ClientLandingPage() {
   const [service, setService] = useState(services[0]);
   const [space, setSpace] = useState(spaces[0]);
   const [measure, setMeasure] = useState('Tengo medidas aproximadas');
+  const [animatedService, setAnimatedService] = useState('');
+
+  const playServiceAnimation = (name) => {
+    if (animatedService === name) {
+      setAnimatedService('');
+      return;
+    }
+    setAnimatedService('');
+    window.requestAnimationFrame(() => setAnimatedService(name));
+  };
+
+  const tiltCard = (event) => {
+    if (event.pointerType === 'touch') return;
+    const bounds = event.currentTarget.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width - .5;
+    const y = (event.clientY - bounds.top) / bounds.height - .5;
+    event.currentTarget.style.setProperty('--tilt-x', `${-y * 7}deg`);
+    event.currentTarget.style.setProperty('--tilt-y', `${x * 9}deg`);
+  };
+
+  const resetCardTilt = (event) => {
+    event.currentTarget.style.setProperty('--tilt-x', '0deg');
+    event.currentTarget.style.setProperty('--tilt-y', '0deg');
+  };
 
   const requestQuote = () => {
     const message = `${defaultWhatsappMessage}\n\nMe interesa: ${service}.\nAmbiente: ${space}.\nMedidas: ${measure}.`;
@@ -41,7 +66,7 @@ export default function ClientLandingPage() {
             <a className="client-button client-button--whatsapp" href={whatsappLink()} target="_blank" rel="noreferrer">Consultar por WhatsApp</a>
           </div>
           <ul className="client-proof">
-            <li>+50 años de experiencia</li><li>Medición sin cargo</li><li>Garantía escrita</li>
+            <li>+50 años de experiencia</li><li>Medición a domicilio</li>
           </ul>
         </div>
       </section>
@@ -49,9 +74,18 @@ export default function ClientLandingPage() {
       <section className="client-services" aria-labelledby="servicios-title">
         <h2 id="servicios-title">Soluciones hechas para tu espacio</h2>
         <div className="client-service-grid">
-          <article><span>01</span><h3>Cortinas a medida</h3><p>Telas, barrales y rieles elegidos para cada ambiente.</p></article>
-          <article><span>02</span><h3>Roller y blackout</h3><p>Privacidad y control de luz con instalación profesional.</p></article>
-          <article><span>03</span><h3>Tapicería</h3><p>Renovamos sillones y sillas con materiales de calidad.</p></article>
+          <button type="button" className={`client-service-card client-service-card--curtains ${animatedService === 'curtains' ? 'is-animated' : ''}`} onPointerMove={tiltCard} onPointerLeave={resetCardTilt} onClick={() => playServiceAnimation('curtains')}>
+            <div className="client-service-visual client-service-visual--curtains" aria-hidden="true"><i /><i /><i /></div>
+            <span>01</span><h3>Cortinas a medida</h3><p>Telas, barrales y rieles elegidos para cada ambiente.</p><small>Presioná para ver</small>
+          </button>
+          <button type="button" className={`client-service-card client-service-card--blackout ${animatedService === 'blackout' ? 'is-animated' : ''}`} onPointerMove={tiltCard} onPointerLeave={resetCardTilt} onClick={() => playServiceAnimation('blackout')}>
+            <div className="client-service-visual client-service-visual--blackout" aria-hidden="true"><i /></div>
+            <span>02</span><h3>Roller y blackout</h3><p>Privacidad y control de luz con instalación profesional.</p><small>Presioná para ver</small>
+          </button>
+          <button type="button" className={`client-service-card client-service-card--upholstery ${animatedService === 'upholstery' ? 'is-animated' : ''}`} onPointerMove={tiltCard} onPointerLeave={resetCardTilt} onClick={() => playServiceAnimation('upholstery')}>
+            <div className="client-service-visual client-service-visual--upholstery" aria-hidden="true"><em /></div>
+            <span>03</span><h3>Tapicería</h3><p>Renovamos sillones y sillas con materiales de calidad.</p><small>Presioná para ver</small>
+          </button>
         </div>
       </section>
 
