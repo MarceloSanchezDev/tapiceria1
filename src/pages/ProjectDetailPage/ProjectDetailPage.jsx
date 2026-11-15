@@ -9,7 +9,7 @@ export default function ProjectDetailPage() {
   if (!project) return <main className="project-detail project-detail--empty"><h1>Trabajo no encontrado</h1><Link to="/">Volver a la página principal</Link></main>;
 
   return <main className="project-detail">
-    <header><Link to="/">← Carlos Reyes Decoraciones</Link><a href={whatsappLink()} target="_blank" rel="noreferrer">WhatsApp</a></header>
+    <header><Link to="/">← Carlos Decoraciones · San Isidro</Link><a href={whatsappLink()} target="_blank" rel="noreferrer">WhatsApp</a></header>
     <section className="project-detail__hero">
       <div>{project.image ? <img src={project.image} alt={project.title} /> : <div className="project-detail__image-placeholder">Espacio reservado para la foto principal</div>}</div>
       <div><p>{project.category}</p><h1>{project.title}</h1><span>{project.summary}</span><a href={whatsappLink(`Hola, quisiera consultar por un trabajo similar a: ${project.title}.`)} target="_blank" rel="noreferrer">Quiero algo similar</a></div>

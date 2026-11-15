@@ -1,11 +1,11 @@
 export const businessData = {
-  name: 'Carlos Reyes Decoraciones',
+  name: 'Carlos Decoraciones',
   experience: '50 años de experiencia',
   phone: 'Lorem ipsum',
   whatsapp: '549110000000',
   email: 'lorem@ipsum.com',
   location: 'Lorem ipsum',
-  instagram: '@carlosreyesdecoraciones',
+  instagram: '@carlosdecoraciones',
   hours: 'Lorem ipsum dolor sit amet',
   services: ['Lorem ipsum', 'Lorem ipsum', 'Lorem ipsum', 'Lorem ipsum'],
 };

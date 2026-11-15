@@ -2,8 +2,10 @@ import { useState } from 'react';
 import { defaultWhatsappMessage, whatsappLink } from '../../data/businessData';
 import { WorkGallery } from '../../components/WorkGallery/WorkGallery';
 import { ScrollCurtain } from '../../components/ScrollCurtain/ScrollCurtain';
+import whatsappIcon from '../../assets/whatsapp-logo.png';
 import './ClientLandingPage.css';
 import './ServiceCardAnimations.css';
+import './BrandAdjustments.css';
 
 const services = ['Cortinas a medida', 'Cortinas roller', 'Blackout', 'Retapizado'];
 const spaces = ['Living', 'Dormitorio', 'Oficina / local', 'Casa completa'];
@@ -46,11 +48,10 @@ export default function ClientLandingPage() {
     <main className="client-landing">
       <header className="client-header">
         <a className="client-brand" href="#inicio">
-          <span className="client-brand__mark">CR</span>
-          <span><strong>Carlos Reyes</strong><small>Decoraciones</small></span>
+          <span className="client-brand__mark" aria-hidden="true"><i /><i /><i /><i /></span>
+          <span><strong>Carlos<br />Decoraciones</strong><small>San Isidro</small></span>
         </a>
         <div className="client-header__actions">
-          <a className="client-whatsapp" href={whatsappLink()} target="_blank" rel="noreferrer">WhatsApp</a>
           <a className="client-quote-link" href="#cotizador">Pedir presupuesto</a>
         </div>
       </header>
@@ -63,7 +64,6 @@ export default function ClientLandingPage() {
           <p className="client-lead">Asesoramiento, medición e instalación con la calidad de un taller familiar.</p>
           <div className="client-hero__buttons">
             <a className="client-button client-button--gold" href="#cotizador">Solicitar presupuesto</a>
-            <a className="client-button client-button--whatsapp" href={whatsappLink()} target="_blank" rel="noreferrer">Consultar por WhatsApp</a>
           </div>
           <ul className="client-proof">
             <li>+50 años de experiencia</li><li>Medición a domicilio</li>
@@ -116,9 +116,12 @@ export default function ClientLandingPage() {
       </section>
 
       <footer className="client-footer">
-        <div><strong>Carlos Reyes Decoraciones</strong><span>Cortinas, roller y tapicería a medida.</span></div>
+        <div><strong>Carlos Decoraciones</strong><span>San Isidro · Cortinas, roller y tapicería a medida.</span></div>
         <a href={whatsappLink()} target="_blank" rel="noreferrer">Escribinos por WhatsApp</a>
       </footer>
+      <a className="client-floating-whatsapp" href={whatsappLink()} target="_blank" rel="noreferrer" aria-label="Consultar por WhatsApp">
+        <img src={whatsappIcon} alt="" />
+      </a>
       <ScrollCurtain />
     </main>
   );

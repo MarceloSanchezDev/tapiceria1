@@ -1,0 +1,65 @@
+/* La identidad usa grises en interfaz; las fotografías conservan su color natural. */
+.client-hero__image { filter: none; }
+
+/* Se conserva la tipografía editorial de la versión anterior. */
+.client-landing { font-family: Inter, Arial, sans-serif; }
+.client-hero h1,
+.client-services h2,
+.client-calculator h2,
+.client-landing .work-gallery h2,
+.client-landing .client-service-card > span,
+.client-landing .client-service-card h3,
+.client-landing .work-card__placeholder span,
+.client-landing .work-card__body h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.client-hero h1 { font-weight: 500; line-height: 1.08; }
+.client-hero h1 em { font-style: italic; }
+.client-landing .client-service-card h3 { font-weight: 400; }
+.scroll-curtain__brand strong { font-family: "Playfair Display", Georgia, serif; letter-spacing: normal; text-transform: none; line-height: .95; }
+.scroll-curtain__note p { font-family: "Playfair Display", Georgia, serif; font-style: italic; letter-spacing: normal; text-transform: none; }
+
+/* Acciones principales con una medida y radio consistentes. */
+.client-header__actions a,
+.client-button,
+.client-submit {
+  min-height: 48px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-header__actions a { min-width: 142px; }
+.client-button { width: 220px; }
+.client-submit { min-height: 52px; }
+
+@media (max-width: 720px) {
+  .client-button { width: 100%; }
+}
+
+.client-floating-whatsapp {
+  position: fixed;
+  z-index: 20;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: 62px;
+  height: 62px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  background: transparent;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .2);
+  text-decoration: none;
+}
+
+.client-floating-whatsapp img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; transform: scale(1.12); }
+
+@media (max-width: 720px) {
+  .client-floating-whatsapp { right: 1rem; bottom: 1rem; }
+}

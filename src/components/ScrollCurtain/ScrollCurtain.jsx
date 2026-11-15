@@ -46,7 +46,7 @@ export function ScrollCurtain() {
     <div className="scroll-curtain__panel scroll-curtain__panel--left" style={{ backgroundImage: `url(${closedCurtain})` }} />
     <div className="scroll-curtain__panel scroll-curtain__panel--right" style={{ backgroundImage: `url(${closedCurtain})` }} />
     <div className="scroll-curtain__note">
-      <div className="scroll-curtain__brand"><strong>Carlos Reyes</strong><span>Decoraciones</span></div>
+      <div className="scroll-curtain__brand"><strong>Carlos<br />Decoraciones</strong><span>San Isidro</span></div>
       <p>Bienvenidos</p>
       <small>Deslizá para descubrir</small>
     </div>
