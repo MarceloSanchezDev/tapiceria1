@@ -1,2 +1,2 @@
 .client-floating-instagram { background: transparent; }
-.client-floating-instagram img { width: 100%; height: 100%; border-radius: 20%; object-fit: cover; }
+.client-floating-instagram img { width: 100%; height: 100%; border-radius: 20%; object-fit: cover; transform: scale(1.45); }

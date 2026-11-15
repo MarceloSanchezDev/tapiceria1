@@ -5,7 +5,8 @@ export const businessData = {
   whatsapp: '5491150996105',
   email: 'lorem@ipsum.com',
   location: 'San Isidro, Buenos Aires, Argentina',
-  instagram: '@carlosdecoraciones',
+  instagram: '@carlosreyesdecoraciones',
+  instagramUrl: 'https://www.instagram.com/carlosreyesdecoraciones?vrfl=MTh6NXZkcmI1eDdrdg==',
   hours: 'Lunes a Viernes: 9:00 - 18:00',
   services: ['Tapicería', 'Cortinas', 'Roller', 'Tapizados'],
 };

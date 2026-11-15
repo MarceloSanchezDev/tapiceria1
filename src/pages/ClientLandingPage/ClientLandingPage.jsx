@@ -17,7 +17,7 @@ export default function ClientLandingPage() {
   const [space, setSpace] = useState(spaces[0]);
   const [measure, setMeasure] = useState('Tengo medidas aproximadas');
   const [animatedService, setAnimatedService] = useState('');
-  const instagramUrl = `https://www.instagram.com/${businessData.instagram.replace('@', '')}`;
+  const instagramUrl = businessData.instagramUrl;
 
   const playServiceAnimation = (name) => {
     if (animatedService === name) {
