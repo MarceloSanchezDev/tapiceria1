@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import { defaultWhatsappMessage, whatsappLink } from '../../data/businessData';
+import { businessData, defaultWhatsappMessage, whatsappLink } from '../../data/businessData';
 import { WorkGallery } from '../../components/WorkGallery/WorkGallery';
 import { ScrollCurtain } from '../../components/ScrollCurtain/ScrollCurtain';
 import whatsappIcon from '../../assets/whatsapp-logo.png';
+import instagramIcon from '../../assets/instagram-logo-transparent.png';
 import './ClientLandingPage.css';
 import './ServiceCardAnimations.css';
 import './BrandAdjustments.css';
+import './InstagramButton.css';
 
 const services = ['Cortinas a medida', 'Cortinas roller', 'Blackout', 'Retapizado'];
 const spaces = ['Living', 'Dormitorio', 'Oficina / local', 'Casa completa'];
@@ -15,6 +17,7 @@ export default function ClientLandingPage() {
   const [space, setSpace] = useState(spaces[0]);
   const [measure, setMeasure] = useState('Tengo medidas aproximadas');
   const [animatedService, setAnimatedService] = useState('');
+  const instagramUrl = `https://www.instagram.com/${businessData.instagram.replace('@', '')}`;
 
   const playServiceAnimation = (name) => {
     if (animatedService === name) {
@@ -119,6 +122,9 @@ export default function ClientLandingPage() {
         <div><strong>Carlos Decoraciones</strong><span>San Isidro · Cortinas, roller y tapicería a medida.</span></div>
         <a href={whatsappLink()} target="_blank" rel="noreferrer">Escribinos por WhatsApp</a>
       </footer>
+      <a className="client-floating-instagram" href={instagramUrl} target="_blank" rel="noreferrer" aria-label="Visitar Instagram">
+        <img src={instagramIcon} alt="" />
+      </a>
       <a className="client-floating-whatsapp" href={whatsappLink()} target="_blank" rel="noreferrer" aria-label="Consultar por WhatsApp">
         <img src={whatsappIcon} alt="" />
       </a>
