@@ -1,13 +1,13 @@
 export const businessData = {
   name: 'Carlos Decoraciones',
   experience: '50 años de experiencia',
-  phone: 'Lorem ipsum',
-  whatsapp: '549110000000',
+  phone: '541150996105',
+  whatsapp: '5491150996105',
   email: 'lorem@ipsum.com',
-  location: 'Lorem ipsum',
+  location: 'San Isidro, Buenos Aires, Argentina',
   instagram: '@carlosdecoraciones',
-  hours: 'Lorem ipsum dolor sit amet',
-  services: ['Lorem ipsum', 'Lorem ipsum', 'Lorem ipsum', 'Lorem ipsum'],
+  hours: 'Lunes a Viernes: 9:00 - 18:00',
+  services: ['Tapicería', 'Cortinas', 'Roller', 'Tapizados'],
 };
 
 export const defaultWhatsappMessage = 'Hola, quiero solicitar un presupuesto para cortinas, roller o tapizados.';
